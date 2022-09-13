@@ -30,11 +30,7 @@ app.use(express.json());
 //     })
 // }
 
-app.get('/', (req, res) => {
-    res.send("Server Working 🔥");
-});
-
-app.get(`/search_stock/:pageNumber`, async (req, res) => {
+app.use(`/search_stock/:pageNumber`, async (req, res) => {
     try {
         let { pageNumber } = req.params;
         pageNumber = parseInt(pageNumber);
@@ -56,5 +52,11 @@ app.get(`/search_stock/:pageNumber`, async (req, res) => {
     }
 });
 
-const port = 8000;
+app.use('/', (req, res) => {
+    res.send("Server Working 🔥");
+});
+
+
+
+const port = process.env.PORT || 8000;
 app.listen(port, () => { console.log(`Server running on port 🔥 : ${port}`) });
