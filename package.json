@@ -2,10 +2,10 @@
   "name": "search_functionality_backend",
   "version": "1.0.0",
   "description": "",
-  "main": "server.tsx",
+  "main": "index.tsx",
   "scripts": {
-    "server": "nodemon server.tsx",
-    "start": "node server.tsx"
+    "server": "nodemon index.tsx",
+    "start": "node index.tsx"
   },
   "author": "",
   "license": "ISC",
