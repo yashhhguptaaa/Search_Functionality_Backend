@@ -2,11 +2,10 @@
   "name": "search_functionality_backend",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "server.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "server": "nodemon server.js",
-    "start": "node server.js"
+    "server": "nodemon server.ts",
+    "start": "node server.ts"
   },
   "author": "",
   "license": "ISC",
