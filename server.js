@@ -29,27 +29,27 @@ app.use(express.json());
 //     })
 // }
 
-app.use(`/search_stock/:pageNumber`, async (req, res) => {
-  try {
-    let { pageNumber } = req.params;
-    pageNumber = parseInt(pageNumber);
+// app.use(`/search_stock/:pageNumber`, async (req, res) => {
+//   try {
+//     let { pageNumber } = req.params;
+//     pageNumber = parseInt(pageNumber);
 
-    const { keyword } = req.body;
-    const response = await axios.get(
-      `https://ticker-2e1ica8b9.now.sh/keyword/${keyword}`
-    );
-    const FlatArray = [].concat(...response.data);
-    let numberOfRecords = [];
-    if (FlatArray.length >= 5) {
-      numberOfRecords = FlatArray.slice(pageNumber - 1, pageNumber + 4);
-    } else {
-      numberOfRecords = FlatArray.slice(0, FlatArray.length);
-    }
-    res.send(numberOfRecords);
-  } catch (error) {
-    return res.status(400).json({ message: "Error while fetching records." });
-  }
-});
+//     const { keyword } = req.body;
+//     const response = await axios.get(
+//       `https://ticker-2e1ica8b9.now.sh/keyword/${keyword}`
+//     );
+//     const FlatArray = [].concat(...response.data);
+//     let numberOfRecords = [];
+//     if (FlatArray.length >= 5) {
+//       numberOfRecords = FlatArray.slice(pageNumber - 1, pageNumber + 4);
+//     } else {
+//       numberOfRecords = FlatArray.slice(0, FlatArray.length);
+//     }
+//     res.send(numberOfRecords);
+//   } catch (error) {
+//     return res.status(400).json({ message: "Error while fetching records." });
+//   }
+// });
 
 app.use("/", (req, res) => {
   res.send("Server Working 🔥");
