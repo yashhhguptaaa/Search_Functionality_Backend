@@ -12,7 +12,7 @@ const corsOptions = {
 app.use(cors(corsOptions));
 
 
-app.use(`/search_stock/:pageNumber`, async (req, res) => {
+app.get(`/search_stock/:pageNumber`, async (req, res) => {
   try {
     let { pageNumber } = req.params;
     pageNumber = parseInt(pageNumber);
@@ -34,7 +34,7 @@ app.use(`/search_stock/:pageNumber`, async (req, res) => {
   }
 });
 
-app.use("/", (req, res) => {
+app.get("/", (req, res) => {
   res.send("Server Working 🔥");
 });
 
