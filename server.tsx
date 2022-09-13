@@ -56,5 +56,5 @@ app.get(`/search_stock/:pageNumber`, async (req, res) => {
     }
 });
 
-const port = process.env.PORT || 8000;
+const port = 8000;
 app.listen(port, () => { console.log(`Server running on port 🔥 : ${port}`) });
