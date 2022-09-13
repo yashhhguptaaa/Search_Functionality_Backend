@@ -5,13 +5,13 @@ const cors = require("cors");
 const app = express();
 app.use(express.json());
 
-// const corsOptions = {
-//     origin: 'https://searching-red.vercel.app',
-//     optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
-// }
+const corsOptions = {
+  origin: 'https://searching-red.vercel.app',
+  optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+}
 
 
-app.use(`/search_stock/:pageNumber`, async (req, res) => {
+app.use(`/search_stock/:pageNumber`, cors(corsOptions), async (req, res) => {
   try {
     let { pageNumber } = req.params;
     pageNumber = parseInt(pageNumber);
