@@ -1,14 +1,18 @@
 ## API Deployed Link:
 
-[https://search-functionality-backend.vercel.app/](https://search-functionality-backend.vercel.app/)
-[https://search-functionality-backend-yashhhguptaaa.vercel.app/](https://search-functionality-backend-yashhhguptaaa.vercel.app/)
-[https://search-functionality-backend-git-main-yashhhguptaaa.vercel.app/](https://search-functionality-backend-git-main-yashhhguptaaa.vercel.app/)
+1. [https://search-functionality-backend.vercel.app/](https://search-functionality-backend.vercel.app/)
+
+2. [https://search-functionality-backend-yashhhguptaaa.vercel.app/](https://search-functionality-backend-yashhhguptaaa.vercel.app/)
+
+3. [https://search-functionality-backend-git-main-yashhhguptaaa.vercel.app/](https://search-functionality-backend-git-main-yashhhguptaaa.vercel.app/)
 
 ## API Endpoints
-| HTTP Operations | Endpoints | Body | Description |
-| --- | --- | --- |
-| Get | `/` | `--` | This endpoint is just to check whether the server is running or not. |
-| Post | `/search_stock/:pageNumber` | `keyword :string`  | This API is responsible for fetching a company's stock data. Here, there is the pagenumber param which is responsible to get particular page data. And on every page, there are 5 or fewer records. In the body, the keyword is responsible to fetch particular data related to that keyword. |
+| HTTP Operations |          Endpoints          |        Body        |                       Description                                        |
+|       ---       |            ---              |         ---        |
+|       Get       |            `/`              |        `--`        | This endpoint is just to check whether the server is running or not.     |
+|       Post      | `/search_stock/:pageNumber` | `keyword :string`  | This API is responsible for fetching a company's stock data. Here, there
+                                                                       is the pagenumber param which is responsible to get particular page data. And on every page, there are 5 or fewer records. In the body, the keyword is responsible to fetch particular data related to that keyword. 
+                                                                                                                                                |
 
 
 ## Open-Source packages / libraries used:
